@@ -1,3 +1,6 @@
+MSIRGB
+======
+
 ISC License
 
 Copyright (c) 2018, Pedro Fanha
