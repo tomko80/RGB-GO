@@ -1,0 +1,56 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly MSIRGB.DLL, Version=2.2.*, Culture=Invariant Language (Invariant Country): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35: 
+	hash=None, flags=None
+Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class MSIRGB.Lighting: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Boolean): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Fields:
+    UInt16 STEP_DURATION_MAX_VALUE = 511 : Public, Static, Literal, HasDefault
+  Methods:
+    BatchBegin(): PrivateScope, Public, HideBySig
+    SetLedEnabled(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    SetColour(Byte, Color): PrivateScope, Public, HideBySig
+    GetColour(Byte): PrivateScope, Public, HideBySig
+    SetBreathingModeEnabled(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    IsBreathingModeEnabled(): PrivateScope, Public, HideBySig
+    SetStepDuration(UInt16): PrivateScope, Public, HideBySig
+    GetStepDuration(): PrivateScope, Public, HideBySig
+    SetFlashingSpeed(FlashingSpeed): PrivateScope, Public, HideBySig
+    GetFlashingSpeed(): PrivateScope, Public, HideBySig
+    BatchEnd(): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Struct MSIRGB.Lighting+FlashingSpeed: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Byte value__ : Public, SpecialName, RTSpecialName
+    FlashingSpeed Disabled = 0 : Public, Static, Literal, HasDefault
+    FlashingSpeed Speed1 = 1 : Public, Static, Literal, HasDefault
+    FlashingSpeed Speed2 = 2 : Public, Static, Literal, HasDefault
+    FlashingSpeed Speed3 = 3 : Public, Static, Literal, HasDefault
+    FlashingSpeed Speed4 = 4 : Public, Static, Literal, HasDefault
+    FlashingSpeed Speed5 = 5 : Public, Static, Literal, HasDefault
+    FlashingSpeed Speed6 = 6 : Public, Static, Literal, HasDefault
+Struct MSIRGB.Lighting+ErrorCode: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    ErrorCode DriverLoadFailed = 0 : Public, Static, Literal, HasDefault
+    ErrorCode MotherboardVendorNotSupported = 1 : Public, Static, Literal, HasDefault
+    ErrorCode MotherboardModelNotSupported = 2 : Public, Static, Literal, HasDefault
+    ErrorCode LoadFailed = 3 : Public, Static, Literal, HasDefault
+Class MSIRGB.Lighting+Exception: AutoLayout, AnsiClass, Class, NestedPublic, BeforeFieldInit
+  :System.Exception
+    Void .ctor(ErrorCode): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    GetErrorCode(): PrivateScope, Public, HideBySig
